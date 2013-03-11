@@ -62,7 +62,7 @@ __battery_osx() {
 			esac
 			if [[ -n $maxcap && -n $curcap && -n $extconnect ]]; then
 				if [[ "$curcap" == "$maxcap" ]]; then
-					return
+					echo ""
 				fi
 				charge=$(( 100 * $curcap / $maxcap ))
 				if [[ "$extconnect" == "Yes" ]]; then
